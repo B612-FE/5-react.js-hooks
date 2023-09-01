@@ -7,7 +7,7 @@ function Toggle() {
     setIsToggle((lastPerson) => (lastPerson === 'user1' ? 'user2' : 'user1'));
   };
 
-  return {isToggle,switchUser};
+  return [isToggle,switchUser];
 }
 
 export default Toggle;

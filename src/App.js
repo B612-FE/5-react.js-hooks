@@ -6,13 +6,13 @@ function App() {
 
 const [lastMessage,setlastMessage] = useState([]);
 const [message,setMessage] = useState('');
-const {user, switchUser} = Toggle();
+const [user, switchUser] = Toggle();
 
 
 const handleMessage = () =>{
   if (message) {
     const nowtime = new Date().toLocaleTimeString();
-    const messagetext = { text: message, time:nowtime };
+    const messagetext = { text: message, time:nowtime, sender: user };
     setlastMessage([...lastMessage, messagetext]);
     setMessage('');
   }
@@ -27,7 +27,11 @@ const handleMessage = () =>{
       
       <div className='messages'>
         {lastMessage.map((messagetext,index) => (
-          <div className='text' key={index}>
+          <div 
+            key={index}
+            className={`message-container ${
+              messagetext.sender === 'user1' ? 'user1' : 'user2'
+           }`} >
             <div>{messagetext.text}</div>
             <div className='time'>{messagetext.time}</div>
           </div>

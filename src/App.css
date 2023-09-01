@@ -1,4 +1,10 @@
 .App {
+  border: none;
+  padding: 20px;
+  width: 500px;
+  background-color: skyblue;
+  border-radius: 15px;
+  margin: 0 auto;
   text-align: center;
   margin-top: 100px;
   max-height: 500px;
@@ -25,7 +31,7 @@
 }
 
 .user2 {
-  background-color: gainsboro;
+  background-color: silver;
   align-self: flex-start;
 }
 
@@ -40,6 +46,12 @@ input{
 }
 
 button {
-  padding: 5px 10px;
+  margin: 5px;
+  padding: 8px 12px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
   cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
 }
