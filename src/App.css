@@ -1,6 +1,8 @@
 .App {
   text-align: center;
   margin-top: 100px;
+  max-height: 500px;
+  overflow-y: auto;
 }
 
 .messages {
@@ -17,8 +19,19 @@
   border-radius: 5px;
 }
 
+.user1 {
+  background-color: beige;
+  align-self: flex-end;
+}
+
+.user2 {
+  background-color: gainsboro;
+  align-self: flex-start;
+}
+
 .input {
   margin-top: 20px;
+  
 }
 
 input{
@@ -28,4 +41,5 @@ input{
 
 button {
   padding: 5px 10px;
+  cursor: pointer;
 }

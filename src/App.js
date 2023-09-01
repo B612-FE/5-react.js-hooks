@@ -4,16 +4,15 @@ import Toggle from './Toggle';
 
 function App() {
 
-const [isToggle,setIsToggle] = Toggle(false);
-
 const [lastMessage,setlastMessage] = useState([]);
-
 const [message,setMessage] = useState('');
+const {user, switchUser} = Toggle();
 
 
 const handleMessage = () =>{
   if (message) {
-    const messagetext = { text: message };
+    const nowtime = new Date().toLocaleTimeString();
+    const messagetext = { text: message, time:nowtime };
     setlastMessage([...lastMessage, messagetext]);
     setMessage('');
   }
@@ -22,13 +21,15 @@ const handleMessage = () =>{
   return (
     <div className="App">
       <h2>messenger</h2>
-      <button className='toggle' onClick={setIsToggle}>
-        change
+      <button className='toggle' onClick={switchUser}>
+        change ({user ==='user1' ? 'user2' : 'user1'})
       </button>
+      
       <div className='messages'>
         {lastMessage.map((messagetext,index) => (
           <div className='text' key={index}>
             <div>{messagetext.text}</div>
+            <div className='time'>{messagetext.time}</div>
           </div>
         ))}
       </div>
@@ -36,6 +37,7 @@ const handleMessage = () =>{
         <input 
           type="text"
           value={message}
+          placeholder='Type your message!'
           onChange={(e) => setMessage(e.target.value)}/>
         <button onClick={handleMessage}>send</button>
       </div>

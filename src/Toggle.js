@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 
 function Toggle() {
-  const [isToggle, setIsToggle] = useState(false);
+  const [isToggle, setIsToggle] = useState('user1');
 
-  const handleToggle = () => {
-    setIsToggle(!isToggle);
+  const switchUser = () => {
+    setIsToggle((lastPerson) => (lastPerson === 'user1' ? 'user2' : 'user1'));
   };
 
-  return [isToggle,handleToggle];
+  return {isToggle,switchUser};
 }
 
 export default Toggle;
