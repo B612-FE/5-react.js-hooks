@@ -1,0 +1,131 @@
+.Container {
+  border: none;
+  padding: 20px;
+  width: 340px;
+  height: 600px;
+  background-color: rgb(218, 233, 241);
+  border-radius: 16px;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.04);
+  margin: 0 auto;
+  margin-top: 96px;
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.chats {
+  height: 500px;
+  padding-bottom: 10px;
+}
+/*
+.chatTime {
+  position: absolute;
+  left: -50px;
+  top: 15px;
+  color: #171717;
+}*/
+
+.message p {
+  margin: 0;
+}
+
+.message span {
+  font-size: 12px;
+  color: #888;
+}
+
+.input {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #eee;
+  position: sticky;
+  bottom: 0;
+}
+
+.input input {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  border-radius: 3px;
+}
+
+.input button {
+  background-color: #f7e730;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 8px 12px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.chattingName {
+  display: flex;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.chattingName button {
+  border-radius: 100px;
+  border: 1px;
+}
+
+.chattingName span {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+.MessageListfromW,
+.MessageListfromW {
+  flex-direction: column;
+  overflow-y: auto;
+  padding: 20px;
+  max-height: 470px;
+}
+.message {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+/*
+.author {
+  position: absolute; 
+  top: 0; 
+}*/
+
+.MessageListfromW .chatBoxtoMaru {
+  display: inline-flex;
+  padding: 7px 12px;
+  margin-bottom: 10px;
+  position: relative;
+  background-color: #ffee00;
+  border-radius: 20px 0px 20px 20px;
+  align-self: flex-end;
+}
+
+.MessageListfromW .chatBoxtoWoorie {
+  display: inline-flex;
+  padding: 7px 12px;
+  margin-bottom: 10px;
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 0px 20px 20px 20px;
+  align-self: flex-start;
+}
+
+.MessageListfromM .chatBoxtoWoorie {
+  display: inline-flex;
+  padding: 7px 12px;
+  margin-bottom: 10px;
+  position: relative;
+  background-color: #ffee00;
+  border-radius: 20px 0px 20px 20px;
+  align-self: flex-end;
+}
+.MessageListfromM .chatBoxtoMaru {
+  display: inline-flex;
+  padding: 7px 12px;
+  margin-bottom: 10px;
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 0px 20px 20px 20px;
+  align-self: flex-start;
+}
