@@ -1,31 +1,87 @@
-# 5주차: ReactJS - hooks
+## 2주차 미션: React-Messenger💌
 
-안녕하세요 프론트엔드 리드 **강나연**, **홍서현**입니다.
+---
 
-이번 주차 과제는 React Hooks를 중점적으로 사용해 보고, Custom Hooks를 만들어 사용해 봅니다.
+### 서론
 
-코드를 작성하다 보면 동일한 코드가 여러 곳에서 반복되기도 하고, 로직이 과하게 길어지기도 하는데요. 이럴 때 Custom Hooks를 사용하면 더욱 효율적이고 깔끔한 코드를 작성할 수 있습니다.
+---
 
-앞으로 React를 사용하시며 자주 사용하게 되실 것이기 때문에 이번 과제를 수행하며 Custom Hooks에 익숙해지시면 좋을 것 같습니다.
+안녕하세요 13기 프론트엔드 운영진 서유빈입니다😆
 
-과제를 수행하며 열심히 고민하시고 이해하시는 만큼 많은 것을 얻어가실 수 있을 것 같습니다!
+2주차부터는, React를 사용하여 미션을 진행해주시면 되는데요, 리액트 첫 미션인 만큼 React 자체에 익숙해지기 위한 시간을 가져보시게 될거에요!
 
-## 과제
+또한 1주차에서 사용해봤던 바닐라 JS의 불편함이라고 할 수 있는 점들을 리액트가 어떻게 해결하는지 직접 코드를 짜보면서 알아보면서 리액트의 컨셉을 전체적으로 이해하시면 좋을 것 같습니다~
 
-토글 기능, 메시지 전송 기능이 있는 메신저를 만들어 봅니다
+2주차 미션 마감일시는 2021년 3월 26일 금요일까지입니다.
 
-예시: [https://react-messenger-16th-kongnayeon.vercel.app](https://react-messenger-16th-kongnayeon.vercel.app/)
+진행 중 어려운 상황이 있다면, 우선 스스로 공부하고 찾아보시구
 
-## 마감 기한
+너무 해결이 안된다 싶으면 슬랙의 qna채널에 올려주시면 됩니다~~
 
-~ 8월 31일 23시 55분
+PR 보내실땐 양식 맞춰주시고, 이번주 부터는 배포한 링크까지 PR 보내주실때 링크 첨부해주세요~~
 
-## 참고 자료
+13기분들 너무 멋져요!! 이번주도 화이팅✨
 
-- Hook
+---
 
-https://ko.legacy.reactjs.org/docs/hooks-intro.html
+## 미션
 
-- Custom Hooks
+---
 
-https://legacy.reactjs.org/docs/hooks-custom.html
+#### 미션목표
+
+---
+
+- React의 기초를 이해한다.
+- useState로 컴포넌트의 상태를 관리할 수 있게된다.
+- useEffect의 사용법을 이해한다.
+
+### 기한
+
+---
+
+- 2021년 3월 26일(금)까지
+
+### Key Questions?
+
+---
+
+- Virtual DOM이 무엇일까요?
+- 미션을 진행하면서 느낀, 리액트를 사용하는 장점이 있었다면?
+- 리액트에서 클래스형과 함수형은 어떤차이가 있을까요?
+- 리액트에서는 상태를 어떻게 관리할까요?
+- styled-components 사용후기 (CSS와 비교)
+
+### 필수 요건
+
+---
+
+- 함수형 컴포넌트를 사용한다.
+- styled-component를 이용하여 스타일링 한다. 스타일링은 자유롭게! 기존에 있는 메신저를 가져오셔도 되고 완전히 독창적인걸 만드셔도 됩니다. 
+  다만 기본 구성요소들은 지켜주세요! 그리고 색도 다양하게 넣어보시구요
+- 상단바에 메시지를 보내는 사람의 프로필을 띄운다. + 상단바의 프로필로 메시지 발신자를 바꿀 수 있게 한다.
+- 공백메시지는 입력되지 않도록 핸들링 한다. + alert 메세지 띄우기
+- 메시지 전송후 입력칸을 비워준다.
+- 메시지 전송후 스크롤을 밑으로 내려준다. (Hint : useEffect + scrollBy 이용)
+- 컴포넌트 이름을 역할이 잘 드러나게 짓는다.
+- 개발자도구에서 Style을 복사하지말고, 직접 styled-components를 사용하여 만드는 연습을 한다ㅠㅠ.
+- [결과 화면](https://react-messenger-12th-2z7y80m5p.vercel.app/chat/:nayubin)을 구현한다.
+
+## 로컬 실행방법
+
+---
+
+`npm start` : 로컬에서 react application을 자동으로 리로드하여 실행시켜줍니다.
+
+배포는 자유롭게 하시면 됩니다.
+
+## 링크 및 참고자료
+
+---
+
+- [create react app (CRA)](https://create-react-app.dev/docs/getting-started/)
+- [리액트 docs 주요 개념 1-12](https://ko.reactjs.org/docs/hello-world.html)
+- [리액트 docs Hook 1-3](https://ko.reactjs.org/docs/hooks-intro.html)
+- [컴포넌트 네이밍을 위한 자바스크립트 네이밍 컨벤션](https://ui.toast.com/fe-guide/ko_CODING-CONVENSION/#%EB%AA%85%EB%AA%85-%EA%B7%9C%EC%B9%99)
+- [useState, useEffect hooks](https://velog.io/@velopert/react-hooks#1-usestate)
+- [styled-component](https://styled-components.com/docs/basics#getting-started)
