@@ -64,7 +64,7 @@ export default function MessageInputBar({ clickInputButton }) {
   return (
     <MessageInputContainer>
       <MessageInputBox
-        placeholder="message"
+        placeholder="메세지를 입력하세요 !"
         value={messageUserInput}
         onChange={handleChange}
         onKeyPress={enterPressed}
