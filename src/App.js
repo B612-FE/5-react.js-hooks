@@ -6,7 +6,7 @@ import useToggle from "./useToggle";
 function App() {
   const [chats, setChats] = useState([]);
   const [newChat, setNewChat] = useState("");
-  const [istoMaru, toggle] = useToggle("true"); //초기값은 true
+  const [istoMaru, toggle] = useToggle(true); //초기값은 true
 
   const addChat = (e) => {
     e.preventDefault();
@@ -21,8 +21,6 @@ function App() {
           toMaru: istoMaru,
         },
       ]);
-      console.log(chats);
-      console.log(istoMaru);
       setNewChat("");
     }
   };

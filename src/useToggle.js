@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function useToggle(initialValue = true) {
+const useToggle = (initialValue = true) => {
   const [state, setState] = useState(initialValue);
 
   const toggle = () => {
@@ -8,6 +8,6 @@ function useToggle(initialValue = true) {
   };
 
   return [state, toggle];
-}
+};
 
 export default useToggle;
