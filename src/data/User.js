@@ -28,7 +28,7 @@ const userProfileSet = [
   {
     profileImage: "6",
     name: "조은정",
-    profileMessage: "4학년 FE개발자 스트리트파이터(?)",
+    profileMessage: "4학년 FE개발자 스트리트파이터(?) INTJ",
   },
   {
     profileImage: "7",

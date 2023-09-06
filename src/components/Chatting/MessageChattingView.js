@@ -2,16 +2,17 @@ import React, { useState } from "react";
 import TopBar from "./MessageTopBar";
 import MessageBox from "./MessageBox";
 import MessageInputBar from "./MessageInputBar";
-import styled from "styled-components";
+// import styled from "styled-components";
+import * as S from "../../styles/Chatting.styled";
 import { useParams } from "react-router";
 import ChatSet from "../../data/BasicChat";
 
-const Container = styled.div`
-  display: flex;
-  width: 100%;
-  height: 100%;
-  flex-direction: column;
-`;
+// const Container = styled.div`
+//   display: flex;
+//   width: 100%;
+//   height: 100%;
+//   flex-direction: column;
+// `;
 
 function ChattingView() {
   let { userID } = useParams();
@@ -33,11 +34,11 @@ function ChattingView() {
   }
 
   return (
-    <Container>
+    <S.Container>
       <TopBar switchUser={switchUser} currentUser={currentUser} />
       <MessageBox userChattingMessageSet={userChattingMessageSet} />
       <MessageInputBar clickInputButton={clickInputButton} />
-    </Container>
+    </S.Container>
   );
 }
 
