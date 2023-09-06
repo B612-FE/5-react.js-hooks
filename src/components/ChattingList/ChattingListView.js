@@ -2,12 +2,7 @@ import React, { useState } from "react";
 import ChattingProfile from "./ChattingProfile";
 import ChattingListTopBar from "./ChattingListTopBar";
 import userProfileSet from "../../data/User";
-// import styled from "styled-components";
 import * as S from "../../styles/ChattingList.styled"
-
-// const Margin = styled.div`
-//   height: 1.9vh;
-// `;
 
 function ChattingList() {
   const [matchUserSet, setMatchUserSet] = useState(userProfileSet);
