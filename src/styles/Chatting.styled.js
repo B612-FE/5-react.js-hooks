@@ -17,7 +17,6 @@ export const ChattingImage = styled.img`
 `;
 
 export const ChattingContext = styled.div`
-  padding-left: 20px;
   line-height: 28px;
   font-size: 15px;
   border: 1px solid #e99ba7;

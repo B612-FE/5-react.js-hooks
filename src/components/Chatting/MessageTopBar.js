@@ -11,7 +11,7 @@ export default function TopBar({ switchUser, currentUser }) {
     <S.TopBox>
       <S.ProfileImageButton onClick={handleProfileImageButtonClick}>
         <S.ProfileImage
-          src={process.env.PUBLIC_URL + "/" + currentUser + ".jpg"}
+          src={` ${process.env.PUBLIC_URL}/${currentUser}.jpg`}
           alt=""
         />
       </S.ProfileImageButton>

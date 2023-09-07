@@ -7,6 +7,7 @@ import ChattingList from "./components/ChattingList/ChattingListView";
 import MoreView from "./components/MoreView";
 import ProfileListView from "./components/UserProfile/ProfileListView";
 import MenuBar from "./components/MenuBar";
+import StatusBar from "./components/StatusBar";
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -18,15 +19,21 @@ function App() {
   return (
     <div className="App">
       <GlobalStyle />
-      <S.Container>
-        <MenuBar />
-        <Routes>
-          <Route path="/profile" element={<ProfileListView />} />
-          <Route path="/chatting-list" element={<ChattingList />} />
-          <Route path="/chat-with/:userID" element={<MessageChattingView />} />
-          <Route path="/more" element={<MoreView />} />
-        </Routes>
-      </S.Container>
+      <S.AppContainer>
+        <StatusBar />
+        <S.Container>
+          <MenuBar />
+          <Routes>
+            <Route path="/profile" element={<ProfileListView />} />
+            <Route path="/chatting-list" element={<ChattingList />} />
+            <Route
+              path="/chat-with/:userID"
+              element={<MessageChattingView />}
+            />
+            <Route path="/more" element={<MoreView />} />
+          </Routes>
+        </S.Container>
+      </S.AppContainer>
     </div>
   );
 }

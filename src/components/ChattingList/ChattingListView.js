@@ -6,14 +6,12 @@ import userProfileSet from "../../data/User";
 function ChattingList() {
   const [matchUserSet, setMatchUserSet] = useState(userProfileSet);
 
-  const searchUser = useCallback((searchUserInput) => {
-    setMatchUserSet([]);
-    for (let userProfile of userProfileSet) {
-      if (userProfile.name.includes(searchUserInput)) {
-        setMatchUserSet((matchUser) => [...matchUser, userProfile]);
-      }
-    }
-  });
+  const searchUser = (searchUserInput) => {
+    const matchedProfiles = userProfileSet.filter((userProfile) =>
+      userProfile.name.includes(searchUserInput)
+    );
+    setMatchUserSet(matchedProfiles);
+  };
 
   return (
     <div>

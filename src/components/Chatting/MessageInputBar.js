@@ -15,7 +15,7 @@ export default function MessageInputBar({ clickInputButton }) {
   }
 
   function handleClickInputButton() {
-    if (messageUserInput !== "") {
+    if (messageUserInput) {
       clickInputButton(messageUserInput);
       setMessageUserInput("");
     }
