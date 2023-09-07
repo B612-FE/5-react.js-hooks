@@ -1,13 +1,13 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import PasswordCheck from "./components/PasswordCheck.js";
-import Messenger from "./Messenger";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Messenger from "./Messenger/Messenger.js";
+import UserNameInput from "./UserName/NameInput.js";
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<PasswordCheck />} />
+        <Route path="/" element={<UserNameInput />} />
         <Route path="/messenger" element={<Messenger />} />
       </Routes>
     </Router>
