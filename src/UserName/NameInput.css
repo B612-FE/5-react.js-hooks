@@ -1,0 +1,49 @@
+@font-face {
+    font-family: 'dalmoori';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2102-01@1.0/dalmoori.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffe460;
+}
+
+.UserName_container{
+    min-width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.UserName_text{
+    margin-top: 10px;
+    font-family: 'dalmoori';
+    font-size: 18px;
+}
+
+.UserName_input_field{
+    padding: 5px; 
+    margin: 20px 10px 10px;
+    display: block;
+    background-color: #ffe460;
+
+    min-height: 25px;
+    max-width: 300px;
+    font-family: 'dalmoori';
+    font-size: 18px;
+    
+    border: 2px solid #000;
+    border-radius: 2px;
+    box-shadow: 0 0 0 4px #f3d5b6,
+    -1px -1px #f3d5b6,
+    inset -2px -2px rgba(0,0,0,.15),
+    inset -3px -3px #f3d5b6,
+    inset -4px -4px rgba(0,0,0,.15);
+}
