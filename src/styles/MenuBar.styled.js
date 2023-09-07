@@ -1,19 +1,20 @@
 import styled from "styled-components";
 
 export const MenuContainer = styled.div`
-  width: 8vw;
-  height: 100vh;
-  position: fixed;
-  background-color: #4169e1;
+  width: 100px;
+  height: 768px;
+
+  background-color: #fd5c63;
 `;
 
 export const MenuButton = styled.button`
-  width: 6vw;
+  width: 100%;
   height: auto;
+  margin-top: 25px;
+
   background: none;
   border: none;
-  padding: 0;
-  margin: 1vw;
+
   opacity: ${(props) => (props.clicked === 1 ? "100%" : "40%")};
   &:focus {
     outline: none;
@@ -24,8 +25,8 @@ export const MenuButton = styled.button`
   }
 `;
 export const ButtonImage = styled.img`
-  width: 100%;
-  height: 100%;
+  width: 60%;
+  height: 60%;
   background-position: 0px 0px;
   &:focus {
     outline: none;

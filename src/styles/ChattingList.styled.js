@@ -1,11 +1,13 @@
 import styled from "styled-components";
 
 export const SearchChatting = styled.input`
-  height: 3vh;
-  width: 70vw;
-  border: 0.5px #e99ba7 solid;
+  width: 100%;
+  height: 30px;
+
+  padding: 0px;
+  font-size: 18px;
+  border: 0px #e99ba7 solid;
   border-radius: 7px;
-  padding: 1px 1.5vw;
   background-color: #ecd0d0;
   &:focus {
     outline: none;
@@ -13,12 +15,15 @@ export const SearchChatting = styled.input`
 `;
 
 export const ChattingListContainer = styled.div`
-  padding-left: 9vw;
-  margin-bottom: 1vh;
-`;
+  h1 {
+    margin: 0px;
+  }
+  width: 412px;
+  height: 120px;
 
-export const Margin = styled.div`
-  height: 1.9vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 `;
 
 export const ProfileImage = styled.img`
@@ -29,11 +34,11 @@ export const ProfileImage = styled.img`
 `;
 
 export const ProfileName = styled.div`
+  color: #000000;
   line-height: 25px;
   font-size: 15px;
   margin: 5px 0px 3px;
   padding: 6px;
-  color: gray;
 `;
 
 export const LastMessage = styled.p`
@@ -44,10 +49,12 @@ export const LastMessage = styled.p`
 `;
 
 export const ProfileBubbleContainer = styled.div`
+  width: 412px;
+  height: auto;
+
   display: flex;
   background-color: #f4f4f4;
   border-top: 1px solid #e99ba7;
-  margin-left: 8vw;
   &:hover {
     background-color: #f0d7d7;
   }

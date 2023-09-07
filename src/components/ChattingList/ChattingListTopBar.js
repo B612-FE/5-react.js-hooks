@@ -15,10 +15,10 @@ function ChattingListTopBar({ searchUser, viewTitle }) {
   return (
     <S.ChattingListContainer>
       <h1>{viewTitle}</h1>
-      <form>
+      <form autocomplete="off">
         <S.SearchChatting
           name="search"
-          placeholder="참여자 검색"
+          placeholder="🔎 검색"
           onChange={handleChange}
         />
       </form>

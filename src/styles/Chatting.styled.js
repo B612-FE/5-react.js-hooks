@@ -1,5 +1,13 @@
 import styled from "styled-components";
 
+export const Container = styled.div`
+  width: 412px;
+  height: 768px;
+
+  display: flex;
+  flex-direction: column;
+`;
+
 export const ChattingImage = styled.img`
   width: 50px;
   height: 50px;
@@ -26,40 +34,33 @@ export const ChattingBubble = styled.div`
 `;
 
 export const ChattingContainer = styled.div`
-  width: 92vw;
-  height: available;
+  width: 412px;
+  height: 628px;
   flex-grow: 1;
-  padding-top: 97px;
-  padding-bottom: 100px;
   background-image: url(${process.env.PUBLIC_URL + "/backgroundImg.jpg"});
   background-repeat: repeat;
-  margin-left: 8vw;
-`;
-
-export const Container = styled.div`
-  display: flex;
-  width: 100%;
-  height: 100%;
-  flex-direction: column;
 `;
 
 export const MessageInputContainer = styled.div`
+  width: 412px;
+  height: 60px;
+
   color: grey;
   display: flex;
-  margin: 1% 0% 0% 8vw;
-  border-top: solid 1px #d16f80;
-  align-items: stretch;
-  position: fixed;
+  border-top: solid 1px #f9e498;
+  justify-content: space-evenly;
+  align-items: center;
+
   bottom: 0px;
-  width: 100%;
-  background-color: #e99ba7;
+
+  background-color: #f9e498;
 `;
 
 export const MessageInputBox = styled.input`
-  color: grey;
-  width: 78vw;
+  width: 80%;
   height: 40px;
-  margin: 1% 0% 1% 2%;
+
+  color: grey;
   border: 0.5px #d16f80 solid;
   text-align: center;
   border-radius: 30px;
@@ -69,13 +70,14 @@ export const MessageInputBox = styled.input`
 `;
 export const MessageInputButton = styled.button`
   color: #f4f4f4;
-  width: 9vw;
+  width: 10%;
   height: 44px;
   border-radius: 10px;
   background-color: #ba4f5f;
   border: 0.5px #ba4f5f solid;
   text-align: center;
   margin: 1%;
+  font-size: 18px;
   &:focus {
     outline: none;
   }
@@ -85,15 +87,13 @@ export const MessageInputButton = styled.button`
 `;
 
 export const TopBox = styled.div`
-  background-color: #e99ba7;
+  width: 412px;
+  height: 80px;
+  background-color: #f9e498;
   color: #ba4f5f;
   display: flex;
-  padding: 1% 2% 1% 1.5%;
+  align-items: center;
   border-bottom: solid 1px #d16f80;
-  position: fixed;
-  top: 0px;
-  width: 100%;
-  margin-left: 8vw;
 `;
 
 export const ProfileImageButton = styled.button`
@@ -101,24 +101,25 @@ export const ProfileImageButton = styled.button`
   height: 60px;
   border-radius: 70%;
   overflow: hidden;
+  margin: 10px;
   padding: 0px;
   border: none;
   &:focus {
     outline: none;
   }
 `;
+
 export const ProfileImage = styled.img`
-  width: 60px;
-  height: 60px;
-  border-radius: 70%;
-  background-position: 0px 0px;
+  width: 100%;
+  height: 100%;
+
   overflow: hidden;
   &:focus {
     outline: none;
   }
 `;
 export const ProfileName = styled.div`
-  padding-left: 20px;
+  padding-left: 5px;
   line-height: 60px;
   font-size: 20px;
 `;

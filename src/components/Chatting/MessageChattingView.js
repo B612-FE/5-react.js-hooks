@@ -6,6 +6,7 @@ import * as S from "../../styles/Chatting.styled";
 import { useParams } from "react-router";
 import ChatSet from "../../data/BasicChat";
 
+
 function ChattingView() {
   let { userID } = useParams();
   const [isMe, setIsMe] = useState(true);

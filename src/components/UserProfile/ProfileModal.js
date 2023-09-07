@@ -28,7 +28,6 @@ const ProfileModal = ({ modalState, setModalState, detailProfile }) => {
           </S.ModalWrapper>
         </S.Background>
       ) : null}
-      ;
     </>
   );
 };

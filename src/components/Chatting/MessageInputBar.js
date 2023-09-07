@@ -20,16 +20,17 @@ export default function MessageInputBar({ clickInputButton }) {
       setMessageUserInput("");
     }
   }
+
   return (
     <S.MessageInputContainer>
       <S.MessageInputBox
         placeholder="메세지를 입력하세요 !"
         value={messageUserInput}
         onChange={handleChange}
-        // onKeyPress={enterPressed}
+        onKeyDown={enterPressed}
       />
       <S.MessageInputButton onClick={handleClickInputButton}>
-        send
+        ↩
       </S.MessageInputButton>
     </S.MessageInputContainer>
   );

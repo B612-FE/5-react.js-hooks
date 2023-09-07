@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import * as S from "../styles/MenuBar.styled";
 
-function MenuBar() {
+const MenuBar = () => {
   return (
     <S.MenuContainer>
       <Link to="/profile">
@@ -22,6 +22,6 @@ function MenuBar() {
       </Link>
     </S.MenuContainer>
   );
-}
+};
 
 export default MenuBar;

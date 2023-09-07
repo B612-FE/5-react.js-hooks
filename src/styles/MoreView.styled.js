@@ -1,17 +1,17 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  padding-top: 3vh;
-  margin-left: 10vw;
+  width: 412px;
+  height: 768px;
 `;
 export const ProfileName = styled.div`
-  padding: 1vh 3vw 0.2vh;
+  text-align: center;
 `;
 
 export const ProfileImage = styled.img`
   width: 60px;
   height: 60px;
-  border-radius: 70%;
+  border-radius: 30%;
   background-position: 0px 0px;
   overflow: hidden;
   &:focus {
@@ -20,15 +20,18 @@ export const ProfileImage = styled.img`
 `;
 
 export const ProfileImageNew = styled(ProfileImage)`
-  width: 30vw;
+  width: 150px;
   height: auto;
-  margin-left: 25vw;
-  margin-bottom: 2vh;
 `;
 export const ProfileContainer = styled.div`
-  width: auto;
-  height: auto;
-  margin: 1vh 2vw 1vh 0vw;
+  width: 412px;
+  height: 300px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
   border: 1px;
   border-color: #b1b1b1;
   background-color: #fffffa;

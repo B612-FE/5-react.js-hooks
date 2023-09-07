@@ -1,16 +1,17 @@
 import React from "react";
-import { useHistory } from "react-router";
+import { useNavigate } from "react-router";
 import * as S from "../../styles/ChattingList.styled";
 import ChatSet from "../../data/BasicChat";
 
 function ChattingProfileBubble({ profile }) {
   //파라미터 쓰기
-  const history = useHistory();
+  const navigate = useNavigate();
   function handleProfileBubbleClick() {
-    history.push({
-      pathname: "/chat-with/" + profile.profileImage,
-      state: { userID: profile.profileImage },
-    });
+    navigate("/chat-with/" + profile.profileImage);
+    // history.push({
+    //   pathname: "/chat-with/" + profile.profileImage,
+    //   state: { userID: profile.profileImage },
+    // });
   }
   return (
     <S.ProfileBubbleContainer onClick={handleProfileBubbleClick}>
