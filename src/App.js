@@ -1,5 +1,4 @@
 import { useState } from "react";
-import "./styles/App.css";
 import MessageList from "./components/MessageList";
 import useToggle from "./hooks/useToggle";
 import styled from "styled-components";
@@ -7,7 +6,6 @@ import styled from "styled-components";
 const Wrapper = styled.div`
   display: flex;
   justify-content: center;
-  align-items: center;
 `;
 
 const Container = styled.div`
@@ -24,7 +22,7 @@ const Container = styled.div`
 
 const ChattingName = styled.header`
   display: flex;
-  padding: 10px;
+  padding: 10px 10px 15px 10px;
   border-bottom: 1px solid #eee;
   justify-content: space-between;
   flex-direction: row;
@@ -34,6 +32,7 @@ const StyledButton = styled.button`
   flex-basis: 20px;
   border-radius: 100px;
   border: 1px;
+  cursor: pointer;
 `;
 
 const UserName = styled.span`
@@ -72,37 +71,36 @@ const SubmitButton = styled.button`
 function App() {
   const [chats, setChats] = useState([]);
   const [newChat, setNewChat] = useState("");
-  const [istoMaru, toggle] = useToggle(true); //초기값은 true
+  const [receiver, toggle] = useToggle("Maru"); //istoMaru - receiver로 바꾸기
 
   const addChat = (e) => {
     e.preventDefault();
     if (newChat !== "") {
-      const sender = istoMaru ? "Woorie" : "Maru";
+      const sender = receiver === "Maru" ? "Woorie" : "Maru";
       setChats([
         ...chats,
         {
           author: sender,
           text: newChat,
           timeStamp: new Date(),
-          toMaru: istoMaru,
         },
       ]);
       setNewChat("");
     }
   };
-  //header flex 로 다시 구성하기!!
+
   return (
     <Wrapper>
       <Container>
         <ChattingName>
           <StyledButton>&lt;</StyledButton>
           <UserName onClick={toggle}>
-            {istoMaru ? "Maru🐶" : "Woorie💕"}
+            {receiver === "Maru" ? "Maru🐶" : "Woorie💕"}
           </UserName>
           <StyledButton>&#8942;</StyledButton>
         </ChattingName>
         <Chats>
-          <MessageList chats={chats} istoMaru={istoMaru}></MessageList>
+          <MessageList chats={chats} receiver={receiver}></MessageList>
         </Chats>
         <InputForm onSubmit={addChat} className="input">
           <MessageInputBox
