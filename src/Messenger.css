@@ -1,0 +1,78 @@
+/* Messenger.css */
+.messenger-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.toggle-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.messenger {
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.messages {
+  max-height: 400px;
+  overflow-y: auto;
+  padding: 10px;
+}
+
+.message-container {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.user {
+  justify-content: flex-end;
+}
+
+.bot {
+  justify-content: flex-start;
+}
+
+.message {
+  padding: 5px 10px;
+  margin: 5px;
+  border-radius: 5px;
+  font-size: 14px;
+  max-width: 70%;
+  background-color: #f4f4f4;
+  word-wrap: break-word;
+}
+
+.user .message {
+  background-color: #007bff;
+  color: white;
+}
+
+.input-container {
+  display: flex;
+  margin-top: 10px;
+}
+
+input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+}
+
+.send-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
