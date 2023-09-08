@@ -1,5 +1,5 @@
 import './App.css';
-import React, {useState} from 'react';
+import React, {useState, useRef, useEffect} from 'react';
 import Toggle from './Toggle';
 
 function App() {
@@ -7,6 +7,10 @@ function App() {
 const [lastMessage,setlastMessage] = useState([]); //lastMessage 상태 변수 생성 , 초기값은 빈배열
 const [message,setMessage] = useState('');
 const [user, switchUser] = Toggle(); // 커스텀 훅을 이용
+const [messageWidth, setMessageWidth] = useState('auto'); // 말풍선 너비 추가
+const messageContainerRef = useRef(null);
+
+
 
 
 const handleMessage = () =>{
@@ -19,6 +23,12 @@ const handleMessage = () =>{
   }
 }
 
+useEffect(() => {
+  if (messageContainerRef.current) {
+    setMessageWidth(`${messageContainerRef.current.scrollWidth}px`);
+  }
+}, lastMessage);
+
   return (
     <div className="App">
       <h2>messenger</h2>
@@ -30,6 +40,7 @@ const handleMessage = () =>{
         {lastMessage.map((messagetext,index) => ( //lastMessage 배열 매핑, 배열 순회
           <div 
             key={index}
+            style={{width:messageWidth}}
             className={`message-container ${
               messagetext.sender === 'user1' ? 'user1' : 'user2' //각기 다른 css 스타일 적용
            }`} >
