@@ -16,7 +16,7 @@ export const SearchChatting = styled.input`
 
 export const ChattingListContainer = styled.div`
   h1 {
-    margin: 0px;
+    margin-left: 10px;
   }
   width: 412px;
   height: 120px;

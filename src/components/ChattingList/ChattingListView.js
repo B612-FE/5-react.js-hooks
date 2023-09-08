@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from "react";
+import React, { useState } from "react";
 import ChattingProfile from "./ChattingProfile";
 import ChattingListTopBar from "./ChattingListTopBar";
 import userProfileSet from "../../data/User";

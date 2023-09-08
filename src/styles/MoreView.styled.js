@@ -1,6 +1,9 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  h1 {
+    margin-left: 10px;
+  }
   width: 412px;
   height: 768px;
 `;
