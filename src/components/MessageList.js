@@ -20,7 +20,8 @@ const MessageWrapper = styled.div`
   display: flex;
   flex-direction: ${(props) =>
     props.sender === props.receiver ? "row-reverse" : "row"};
-  align-self: flex-end;
+  align-self: ${(props) =>
+    props.sender === props.receiver ? "flex-start" : "flex-end"};
 `;
 
 const Content = styled.div`
